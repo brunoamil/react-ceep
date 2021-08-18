@@ -7,7 +7,7 @@ export default class ListaDeNotas extends Component {
         <li>
           <section>
             <header>
-              <h3>Título</h3>
+              <h3>Título =D</h3>
             </header>
             <p>Escreva sua nota</p>
           </section>
