@@ -13,8 +13,15 @@ export default class Categorias {
       func(this.categorias);
     });
   }
+
+  desinscrever(func) {
+    console.log(this._inscritos.length);
+    this._inscritos = this._inscritos.filter(f => f !== func);
+    console.log(this._inscritos.length);
+  }
+
   adicionarCategoria(novaCategoria) {
-    console.log('adicionar categoria', this.categorias);
     this.categorias.push(novaCategoria);
+    this.notificar();
   }
 }
