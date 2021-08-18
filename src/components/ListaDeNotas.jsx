@@ -1,34 +1,17 @@
 import React, { Component } from 'react';
+import CardNota from './CardNota';
 
-export default class ListaDeNotas extends Component {
+class ListaDeNotas extends Component {
   render() {
-    return (
-      <ul>
+    return <ul>{Array.of("Trabalho", "Trabalho", "Estudos").map(categoria => {
+      return (
         <li>
-          <section>
-            <header>
-              <h3>Título =D</h3>
-            </header>
-            <p>Escreva sua nota</p>
-          </section>
+          <div>{categoria}</div>
+          <CardNota />
         </li>
-        <li>
-          <section>
-            <header>
-              <h3>Título</h3>
-            </header>
-            <p>Escreva sua notsa</p>
-          </section>
-        </li>
-        <li>
-          <section>
-            <header>
-              <h3>Título</h3>
-            </header>
-            <p>Escreva sua nota</p>
-          </section>
-        </li>
-      </ul>
-    );
+      );
+    })}</ul>;
   }
 }
+
+export default ListaDeNotas;
